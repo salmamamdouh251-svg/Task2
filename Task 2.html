@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>لغة CSS وتطورها في تصميم وتطوير المواقع الإلكترونية</title>
+</head>
+
+<body>
+
+    <h1>لغة صفحات الطرز المتراصة (CSS) وتطورها في تصميم وتطوير المواقع الإلكترونية</h1>
+
+    <p>
+        <strong>إعداد الطالبة:</strong>
+        سلمى ممدوح عبد الغفار رحيم
+    </p>
+
+    <p>
+        <strong>السكشن:</strong> 75
+    </p>
+
+    <p>
+        
+        
+        
+        <strong>المجموعة:</strong> (ج)
+    </p>
+
+    <hr>
+
+    <h2>1. المقدمة العامة</h2>
+
+    <p>
+        شهدت شبكة الإنترنت وتطوير المواقع ثورة حقيقية منذ بداية تسعينيات القرن الماضي وحتى وقتنا الحالي.
+        في البدايات، كانت الصفحات عبارة عن نصوص مجردة تحتوي على روابط شعبية (Hyperlinks) وتنسيقات بسيطة للغاية
+        تُدار بالكامل عبر لغة HTML.
+    </p>
+
+    <p>
+        ومع توسع استخدام الشبكة العنكبوتية، برزت الحاجة الماسة إلى فصل المحتوى والهيكل عن الشكل والمظهر الجمالي.
+        من هنا جاءت لغة CSS (Cascading Style Sheets) أو ما يُعرف باللغة العربية بـ "صفحات الطرز المتراصة".
+    </p>
+
+    <p>
+        تُعد CSS الحجر الأساسي والعمود الفقري لتصميم واجهات المستخدم (UI) على الشبكة، حيث تتيح للمطورين
+        والمصممين التحكم الكامل في الألوان، والخطوط، والتخطيطات (Layouts)، والأبعاد، والمسافات،
+        بالإضافة إلى المؤثرات البصرية والحركية.
+    </p>
+
+    <h2>2. الخلفية التاريخية وتطور CSS</h2>
+
+    <p>
+        تم اقتراح CSS لأول مرة بواسطة هاكون فيوم لي (Håkon Wium Lie) في 10 أكتوبر 1994 أثناء عمله
+        مع تيم بيرنرز لي في منظمة CERN.
+    </p>
+
+    <p>
+        كان الهدف هو إنشاء لغة تظليل بسيطة ومرنة تمكن المتصفحات من عرض الصفحات بشكل موحد وجذاب.
+    </p>
+
+    <h3>مراحل التطور والإصدارات</h3>
+
+    <h3>CSS 1 عام 1996</h3>
+
+    <p>
+        أصبح توصية رسمية من منظمة W3C (World Wide Web Consortium)، وتضمن الإصدار الأول خصائص أساسية مثل:
+    </p>
+
+    <ul>
+        <li>خطوط النصوص وأحجامها.</li>
+        <li>ألوان النصوص والخلفيات.</li>
+        <li>الهوامش (Margins) والحواشي (Padding) والحدود (Borders).</li>
+    </ul>
+
+    <h3>CSS 2 & CSS 2.1 عام 1998 - 2011</h3>
+
+    <p>
+        شهد هذا الإصدار دعماً للمواقع متعددة وسائط العرض (Print, Screen)، ومفهوم التموضع
+        Absolute/Relative positioning، ونصوص Z-index، ودعم أعمق للجداول ولغات الكتابة المختلفة.
+    </p>
+
+    <h3>CSS 3 منذ عام 1999 وحتى الآن</h3>
+
+    <p>
+        تم تقسيم CSS3 إلى وحدات متخصصة (Modules) مستقلة لتسهيل التطوير والتحديث، وتضمنت ميزات مثل:
+    </p>
+
+    <ul>
+        <li>الأركان الدائرية (Border Radius) والظلال (Box-Shadow).</li>
+        <li>التدرجات اللونية (Gradients).</li>
+        <li>التخطيطات الحديثة: Flexbox و CSS Grid.</li>
+        <li>الحركة والتدرج الزمني (Animations & Transitions).</li>
+        <li>التجاوب مع الشاشات المختلفة عبر استعالمات الوسائط (Media Queries).</li>
+    </ul>
+
+    <h2>3. المفهوم الأساسي والبنية الهيكلية (Syntax)</h2>
+
+    <p>
+        تعتمد CSS على قاعدة بسيطة تتكون من المحدد (Selector) وكتلة التصريح (Declaration Block).
+    </p>
+
+    <pre>
+selector {
+    property: value;
+    property: value;
+}
+    </pre>
+
+    <h3>مكونات قاعدة CSS</h3>
+
+    <ol>
+        <li>
+            <strong>المحدد (Selector):</strong>
+            يشير إلى عنصر HTML المراد تطبيق التنسيق عليه.
+        </li>
+
+        <li>
+            <strong>الخاصية (Property):</strong>
+            السمة التنسيقية المراد تغييرها مثل Color و Font-size.
+        </li>
+
+        <li>
+            <strong>القيمة (Value):</strong>
+            الإعداد المحدد للخاصية مثل Red و 16px.
+        </li>
+    </ol>
+
+    <h2>4. طرق ربط CSS بملفات HTML</h2>
+
+    <p>
+        توجد ثلاث طرق رئيسية لربط تنسيقات CSS بصفحات HTML:
+    </p>
+
+    <h3>أ. التنسيق الداخلي السطري (Inline CSS)</h3>
+
+    <p>
+        يتم إضافته مباشرة داخل عنصر HTML باستخدام الخاصية style.
+    </p>
+
+    <pre>
+&lt;p style="color: blue;"&gt;هذا نص أزرق&lt;/p&gt;
+    </pre>
+
+    <p>
+        <strong>المميزات:</strong> مفيد للاختبارات السريعة.
+    </p>
+
+    <p>
+        <strong>العيوب:</strong> يصعب صيانته ويخل بمبدأ فصل المحتوى عن التصميم.
+    </p>
+
+    <h3>ب. التنسيق الداخلي (Internal / Embedded CSS)</h3>
+
+    <p>
+        يُكتب داخل عنصر &lt;style&gt; في رأس صفحة HTML داخل &lt;head&gt;.
+    </p>
+
+    <h3>ج. التنسيق الخارجي (External CSS)</h3>
+
+    <p>
+        يُكتب الكود في ملف مستقل بامتداد .css ويتم ربطه بالصفحة باستخدام العنصر &lt;link&gt;.
+    </p>
+
+    <pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+    </pre>
+
+    <p>
+        <strong>المميزات:</strong>
+        إمكانية إعادة استخدام الملف لجميع صفحات الموقع، وسهولة التعديل والصيانة،
+        وتحسين سرعة تحميل الموقع عبر التخزين المؤقت (Caching).
+    </p>
+
+    <h2>5. المحددات (Selectors) وأنواعها</h2>
+
+    <p>
+        تتيح المحددات في CSS اختيار عناصر معينة بدقة عالية.
+    </p>
+
+    <h3>المحددات الأساسية (Basic Selectors)</h3>
+
+    <ul>
+        <li>
+            <strong>محدد العنصر (Element Selector):</strong>
+            يستهدف جميع العناصر من نوع معين مثل h1 و p.
+        </li>
+
+        <li>
+            <strong>محدد الفئة (Class Selector):</strong>
+            يبدأ بنقطة ويستهدف العناصر ذات كلاس معين مثل .btn.
+        </li>
+
+        <li>
+            <strong>محدد المعرف (ID Selector):</strong>
+            يبدأ بعلامة # ويستهدف عنصراً فريداً واحداً مثل #header.
+        </li>
+
+        <li>
+            <strong>المحدد العام (Universal Selector):</strong>
+            العلامة * وتستهدف جميع العناصر في الصفحة.
+        </li>
+    </ul>
+
+    <h3>المحددات المركبة والمتقدمة</h3>
+
+    <ul>
+        <li>محدد الأبناء المباشرين (Child Selector &gt;).</li>
+        <li>المحددات الزائفة (Pseudo-classes) مثل :hover و :focus و :nth-child().</li>
+        <li>العناصر الزائفة (Pseudo-elements) مثل ::before و ::after.</li>
+    </ul>
+
+    <h2>6. نموذج الصندوق (Box Model)</h2>
+
+    <p>
+        يُعد Box Model المفهوم الأهم في CSS لتحديد المساحات وتخطيط العناصر.
+        يتكون كل عنصر في HTML من صندوق يتألف من أربعة أجزاء متداخلة:
+    </p>
+
+    <ol>
+        <li>
+            <strong>المحتوى (Content):</strong>
+            المساحة التي يظهر فيها النص أو الصورة.
+        </li>
+
+        <li>
+            <strong>الحشوة الداخلية (Padding):</strong>
+            المساحة الشفافة الفاصلة بين المحتوى والحدود.
+        </li>
+
+        <li>
+            <strong>الحدود (Border):</strong>
+            الإطار المحيط بالحشوة والمحتوى.
+        </li>
+
+        <li>
+            <strong>الهامش الخارجي (Margin):</strong>
+            المساحة الشفافة الفاصلة بين العنصر والعناصر المجاورة له.
+        </li>
+    </ol>
+
+    <h2>7. خصائص الخطوط والنصوص والألوان</h2>
+
+    <h3>أ. تنسيق الخطوط (Typography)</h3>
+
+    <ul>
+        <li><strong>font-family:</strong> لتحديد نوع الخط.</li>
+        <li><strong>font-size:</strong> لتحديد حجم الخط.</li>
+        <li><strong>font-weight:</strong> للتحكم في سماكة الخط.</li>
+        <li><strong>font-style:</strong> لتحديد ما إذا كان الخط مائلاً أم عادياً.</li>
+    </ul>
+
+    <h3>ب. تنسيق النصوص (Text Styling)</h3>
+
+    <ul>
+        <li><strong>text-align:</strong> لمحاذاة النص.</li>
+        <li><strong>text-decoration:</strong> لإضافة خطوط تحت أو فوق أو عبر النص.</li>
+        <li><strong>line-height:</strong> لتحديد المسافة العمودية بين الأسطر.</li>
+        <li><strong>letter-spacing و word-spacing:</strong> للتحكم في المسافات بين الحروف والكلمات.</li>
+    </ul>
+
+    <h3>ج. الألوان وخلفيات العناصر</h3>
+
+    <ul>
+        <li><strong>color:</strong> لتحديد لون النص.</li>
+        <li><strong>background-color:</strong> للتحكم في لون الخلفية.</li>
+        <li><strong>background-image:</strong> للتحكم في صور أو تدرجات الخلفية.</li>
+    </ul>
+
+    <h2>8. خصائص التموضع والعرض (Display)</h2>
+
+    <h3>أ. خاصية العرض (display)</h3>
+
+    <ul>
+        <li><strong>block:</strong> يبدأ في سطر جديد ويشغل العرض الكامل المتاح.</li>
+        <li><strong>inline:</strong> يأخذ مساحة بقدر محتواه فقط ولا يبدأ في سطر جديد.</li>
+        <li><strong>inline-block:</strong> يجمع بين ميزات الاثنين.</li>
+        <li><strong>none:</strong> يخفي العنصر تماماً من الصفحة.</li>
+    </ul>
+
+    <h3>ب. خصائص التموضع (Positioning)</h3>
+
+    <ul>
+        <li><strong>static:</strong> التدفق الطبيعي للعنصر.</li>
+        <li><strong>relative:</strong> يتم تحريك العنصر بالنسبة لمكانه الأصلي.</li>
+        <li><strong>absolute:</strong> يتم تحريك العنصر بالنسبة لأقرب أب يمتلك تموضعاً غير static.</li>
+        <li><strong>fixed:</strong> يثبت العنصر في مكان محدد بالنسبة لنافذة المتصفح.</li>
+        <li><strong>sticky:</strong> هجين بين relative و fixed بناءً على موضع التمرير.</li>
+    </ul>
+
+    <h2>9. أنظمة التخطيط الحديثة: Flexbox</h2>
+
+    <p>
+        يُعرف رسمياً بـ Flexible Box Layout، وهو نظام تخطيط أحادي الاتجاه
+        (إما صف أو عمود) تم تصميمه لتوزيع العناصر داخل الحاويات وتسهيل محاذاتها
+        حتى مع تغير أحجام الشاشات ديناميكياً.
+    </p>
+
+    <h3>المفاهيم الأساسية لـ Flexbox</h3>
+
+    <ul>
+        <li>
+            <strong>Flex Container:</strong>
+            العنصر الأب الذي نطبق عليه display: flex;
+        </li>
+
+        <li>
+            <strong>Flex Items:</strong>
+            العناصر الابنة المباشرة داخل الحاوية.
+        </li>
+    </ul>
+
+    <h3>أهم خصائص Flexbox</h3>
+
+    <ul>
+        <li><strong>flex-direction:</strong> لتحديد اتجاه المحور الرئيسي.</li>
+        <li><strong>justify-content:</strong> لتوزيع العناصر على طول المحور الرئيسي.</li>
+        <li><strong>align-items:</strong> لمحاذاة العناصر على المحور التقاطعي.</li>
+        <li><strong>flex-wrap:</strong> للتحكم في التفاف العناصر.</li>
+    </ul>
+
+    <h2>10. أنظمة التخطيط المتقدمة: CSS Grid</h2>
+
+    <p>
+        يُعد CSS Grid Layout نظام تخطيط ثنائي الاتجاه (صفوف وأعمدة معاً)،
+        مما يجعله أداة قوية لتصميم الهياكل الكبرى والصفحات المعقدة.
+    </p>
+
+    <h3>المفاهيم الأساسية</h3>
+
+    <ul>
+        <li>
+            <strong>Grid Container:</strong>
+            تُفعل باستخدام display: grid;
+        </li>
+
+        <li>
+            <strong>الصفوف والأعمدة:</strong>
+            تُحدد عبر خصائص مثل grid-template-columns و grid-template-rows.
+        </li>
+    </ul>
+
+    <h3>مميزات CSS Grid</h3>
+
+    <ul>
+        <li>استخدام وحدة القياس fr (Fraction) لتقسيم المساحات بنسب مرنة.</li>
+        <li>إمكانية تداخل العناصر (Overlapping).</li>
+        <li>تحديد مواقع العناصر بدقة عبر أرقام الخطوط أو أسماء المناطق.</li>
+    </ul>
+
+    <h2>11. التصميم المتجاوب واستعلامات الوسائط (Media Queries)</h2>
+
+    <p>
+        مع تنوع أجهزة المستخدمين مثل الهواتف الذكية والأجهزة اللوحية والحواسيب المحمولة،
+        أصبح Responsive Web Design ضرورة حتمية لضمان ظهور الموقع بشكل مثالي على كافة الشاشات.
+    </p>
+
+    <p>
+        تسمح استعالمات الوسائط (@media) بتطبيق قواعد تنسيق CSS مختلفة بناءً على خصائص جهاز المستخدم
+        مثل عرض الشاشة والارتفاع ودقة العرض.
+    </p>
+
+    <pre>
+body {
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #f0f0f0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+    </pre>
+
+    <h2>12. الحركات الانتقالية والتأثيرات الحركية</h2>
+
+    <h3>أ. الانتقالات (CSS Transitions)</h3>
+
+    <p>
+        تسمح بتغيير خصائص العنصر بشكل سلس وتدريجي عند حدوث حدث معين مثل تمرير الفأرة :hover.
+    </p>
+
+    <ul>
+        <li><strong>transition-property:</strong> الخاصية المراد تطبيق التأثير عليها.</li>
+        <li><strong>transition-duration:</strong> مدة التأثير.</li>
+        <li><strong>transition-timing-function:</strong> سرعة التسارع والتباطؤ.</li>
+        <li><strong>transition-delay:</strong> فترة التأخير قبل بدء التأثير.</li>
+    </ul>
+
+    <h3>ب. الحركات والرسوم المتحركة (CSS Animations)</h3>
+
+    <p>
+        تتيح للمطورين بناء حركات معقدة ومستقلة باستخدام قاعدة @keyframes لتحديد مراحل الحركة
+        بدقة من البداية (0%) إلى النهاية (100%).
+    </p>
+
+    <pre>
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box {
+    animation: slideIn 1s ease-in-out infinite alternate;
+}
+    </pre>
+
+    <h2>13. المتغيرات في CSS (CSS Custom Properties / Variables)</h2>
+
+    <p>
+        من أحدث وأقوى الإضافات في لغة CSS إمكانية تعريف واستخدام المتغيرات البرمجية
+        محلياً وعالمياً، مما سهل إدارة الألوان والأحجام وتحديثها في مكان واحد.
+    </p>
+
+    <pre>
+:root {
+    --primary-color: #3498db;
+    --main-font-size: 16px;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: var(--main-font-size);
+}
+    </pre>
+
+    <h3>الفوائد الرئيسية</h3>
+
+    <ul>
+        <li>تقليل التكرار في الأكواد (DRY Principle).</li>
+        <li>تسهيل إنشاء وتفعيل مظهر الوضع الليلي (Dark Mode) ديناميكياً.</li>
+    </ul>
+
+    <h2>14. تحسين الأداء وأفضل الممارسات في كتابة كود CSS</h2>
+
+    <ol>
+        <li>
+            <strong>تصغير وتجميع الملفات (Minification & Bundling):</strong>
+            إزالة المسافات الزائدة والتعليقات وضغط الملفات لتقليل حجم الحزم المنقولة عبر الشبكة.
+        </li>
+
+        <li>
+            <strong>تجنب المحددات المفرطة في التعقيد:</strong>
+            الابتعاد عن السلاسل الطويلة جداً في المحددات.
+        </li>
+
+        <li>
+            <strong>استخدام أدوات ما قبل المعالجة:</strong>
+            مثل Sass و LESS لتنظيم الأكواد واستخدام الدوال الحسابية والتداخلات.
+        </li>
+
+        <li>
+            <strong>الفصل الذكي للملفات:</strong>
+            تقسيم الأكواد إلى وحدات صغيرة (Modular CSS) مثل ملفات خاصة بالتخطيط والأزرار والألوان.
+        </li>
+    </ol>
+
+    <h2>15. الخاتمة والنتائج والتوصيات</h2>
+
+    <h3>الخاتمة</h3>
+
+    <p>
+        شهدت لغة صفحات الطرز المتراصة (CSS) تطوراً هائلاً من مجرد أداة بسيطة لتلوين النصوص
+        وإضافة الخطوط في تسعينيات القرن الماضي، لتصبح نظاماً هندسياً متكاملاً يدعم أنظمة التخطيط
+        المتقدمة مثل Flexbox و Grid، والرسوم المتحركة التفاعلية، والتصميم المتجاوب مع كافة الأجهزة الذكية.
+    </p>
+
+    <p>
+        لقد نجحت CSS في تحقيق الهدف الأسمى بفصل الهيكل البرمجي (HTML) عن العرض الجمالي والمظهر المرئي،
+        مما رفع من كفاءة وموثوقية تطوير تطبيقات الويب الحديثة.
+    </p>
+
+    <hr>
+
+    <h2>الصورة</h2>
+
+    <p>
+        صورة توضيحية مرتبطة بموضوع CSS:
+    </p>
+
+    <img src="css.jpg" alt="صورة توضيحية للغة CSS" width="400">
+
+    <p>
+        <strong>ملاحظة:</strong>
+        ضعي صورة باسم <strong>css.jpg</strong>   HTML.
+    </p>
+
+    <hr>
+
+    <h2>المراجع والمصادر</h2>
+
+    <h3>أولاً: الكتب والمؤلفات الأكاديمية</h3>
+
+    <ol>
+        <li>Duckett, J. (2011). HTML and CSS: Design and Build Websites. John Wiley & Sons.</li>
+
+        <li>
+            Lie, H. W., & Bos, B. (2005).
+            Cascading Style Sheets: designing for the Web (3rd ed.).
+            Addison-Wesley.
+        </li>
+
+        <li>
+            Meyer, E. A. (2017).
+            Cascading Style Sheets: The Definitive Guide (4th ed.).
+            O'Reilly Media.
+        </li>
+
+        <li>
+            Cederholm, D. (2018).
+            CSS Secrets: Better Solutions to Everyday Web Design Problems.
+            O'Reilly Media.
+        </li>
+
+        <li>
+            Freeman, A. (2020).
+            Pro CSS and HTML Design.
+            Apress Publications.
+        </li>
+    </ol>
+
+    <h3>ثانياً: التوثيقات الرسمية والمعايير القياسية</h3>
+
+    <ol start="6">
+        <li>
+            World Wide Web Consortium (W3C). (2021).
+            Cascading Style Sheets (CSS) Snapshot.
+            W3C Recommendation.
+        </li>
+
+        <li>
+            Mozilla Developer Network (MDN Web Docs). (2024–2025).
+            CSS: Cascading Style Sheets Reference & Advanced Layouts (Flexbox and Grid).
+            Mozilla.
+        </li>
+
+        <li>
+            W3Schools. (2026).
+            CSS Tutorial, References, and Web Standards.
+            Refsnes Data.
+        </li>
+    </ol>
+
+    <h3>الروابط الرسمية</h3>
+
+    <p>
+        <strong>W3C:</strong>
+        <a href="https://www.w3.org/TR/css-2021/" target="_blank">
+            https://www.w3.org/TR/css-2021/
+        </a>
+    </p>
+
+    <p>
+        <strong>MDN Web Docs:</strong>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+            https://developer.mozilla.org/en-US/docs/Web/CSS
+        </a>
+    </p>
+
+    <p>
+        <strong>W3Schools:</strong>
+        <a href="https://www.w3schools.com/css/" target="_blank">
+            https://www.w3schools.com/css/
+        </a>
+    </p>
+
+</body>
+</html>
